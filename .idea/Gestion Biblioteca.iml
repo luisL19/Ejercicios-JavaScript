@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu de Opciones</title>
+  <style>
+    .opcion {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="menu">
+    <button onclick="mostrarOpcion('opcion1')">Opción 1</button>
+    <button onclick="mostrarOpcion('opcion2')">Opción 2</button>
+    <button onclick="mostrarOpcion('opcion3')">Opción 3</button>
+  </div>
+
+  <div id="opcion1" class="opcion">
+    Contenido de la opción 1
+  </div>
+  <div id="opcion2" class="opcion">
+    Contenido de la opción 2
+  </div>
+  <div id="opcion3" class="opcion">
+    Contenido de la opción 3
+  </div>
+
+  <script>
+    function mostrarOpcion(id) {
+      // Oculta todas las opciones
+      var opciones = document.querySelectorAll('.opcion');
+      opciones.forEach(function(opcion) {
+        opcion.style.display = 'none';
+      });
+
+      // Muestra la opción seleccionada
+      var opcion = document.getElementById(id);
+      opcion.style.display = 'block';
+    }
+  </script>
+</body>
+</html>
